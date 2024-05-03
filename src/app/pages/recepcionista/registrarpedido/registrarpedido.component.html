@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Registrar Pedido</h1>
+  <form (ngSubmit)="registrarCliente()" #clienteForm="ngForm">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" required [(ngModel)]="cliente.nombre" name="nombre">
+    </div>
+    <div class="form-group">
+      <label for="dni">DNI:</label>
+      <input type="number" class="form-control" id="dni" required [(ngModel)]="cliente.dni" name="dni">
+    </div>
+    <div class="form-group">
+      <label for="correo">Correo:</label>
+      <input type="email" class="form-control" id="correo" required [(ngModel)]="cliente.correo" name="correo">
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="text" class="form-control" id="telefono" required [(ngModel)]="cliente.telefono" name="telefono">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+  
+<div class="container">
+  <h1>Detalles del pedido</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Precio Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <td>{{ item.nombre }}</td>
+        <td>
+          <input type="number" [(ngModel)]="item.cantidadproducto" min="1">
+        </td>
+        <td>{{ item.precio }}</td>
+        <td>{{ item.precio * item.cantidadproducto }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="removeFromCart(item)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-right">
+    <h4>Total: {{ calculateTotalPrice() }}</h4>
+    <button class="btn btn-primary" (click)="generarPedido()">GENERAR PEDIDO</button>
+    <button class="btn btn-danger" routerLink="/recepcionista/consultarproducto">AGREGAR PRODUCTO</button>
+    <button class="btn btn-success"  (click)="generarBoleta()">GENERAR BOLETA</button>
+  </div>
+</div>

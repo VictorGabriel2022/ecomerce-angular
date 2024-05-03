@@ -1,0 +1,72 @@
+.full-width {
+
+  width: 100%;;
+
+}
+
+
+
+
+.lienzo {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  height: 85vh;
+
+}
+
+
+
+
+.container-form {
+
+  display: flex;
+
+  border-radius: 20px;
+
+  max-width: 900px;
+
+  background-color: white;
+
+  box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+
+}
+
+
+
+
+.border {
+
+  border-top-right-radius: 20px;
+
+  border-bottom-right-radius: 20px;
+
+}
+
+
+
+
+.image {
+
+  width: auto;
+
+}
+
+
+
+
+.informacion {
+
+  display: flex;
+
+  text-align: center;
+
+  margin: 20px;
+
+  align-items: center;
+
+}

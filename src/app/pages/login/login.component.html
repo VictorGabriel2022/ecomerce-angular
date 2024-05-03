@@ -1,0 +1,59 @@
+<div class="lienzo">
+
+  <div class="container-form">
+
+    <div class="informacion">
+
+      <form (ngSubmit)="formSubmit()">
+
+        <h1><b>Iniciar Sesión</b></h1>
+
+        <mat-form-field class="full-width" appearance="outline">
+
+          <mat-label>Nombre de usuario</mat-label>
+
+          <input [(ngModel)]="loginData.username" name="username" required matInput
+
+            placeholder="Digite su nombre de usuario">
+
+          <mat-hint>El nombre de usuario debe ser válido</mat-hint>
+
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+
+          <mat-label>Contraseña</mat-label>
+
+          <input [(ngModel)]="loginData.password" name="password" required type="password" matInput
+
+            placeholder="Digite su contraseña">
+
+          <mat-hint>La contraseña debe ser válida</mat-hint>
+
+        </mat-form-field>
+
+   
+
+        <div class="container mt-4">
+
+          <button type="submit" mat-raised-button color="primary">Iniciar sesión</button>
+
+        </div>
+        <button type="submit"  routerLink="/restablecer" class="btn btn-link">Olvidaste tu contraseña?</button>
+      </form>
+      
+
+    </div>
+
+    <div class="image">
+
+      <img class="border" height="400" width="230" src="../../../assets/image 14.png"  alt="Imagen de registro" >
+
+    </div>
+
+  </div>
+
+</div>
+
+
+

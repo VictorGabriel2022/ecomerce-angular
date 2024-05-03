@@ -1,0 +1,23 @@
+<div class="bootstrap-wrapper">
+  <div class="lienzo">
+    <div class="container-form">
+      <div class="image">
+        <img class="border" src="../../../assets/image 11.png" width="310" height="540" alt="Icono de registro">
+      </div>
+      <div class="information">
+        <form (ngSubmit)="solicitarCita()">
+          <h1><b>Solicitar cita</b></h1>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Asunto</mat-label>
+            <textarea required [(ngModel)]="cita.asunto" name="asunto" matInput
+              placeholder="Digite el asunto de la cita"></textarea>
+          </mat-form-field>
+          <h4>*Su reserva será atendida en las próximas 48 horas</h4>
+          <button type="submit" mat-raised-button color="primary">Solicitar Cita</button>
+          <button routerLink="/catalogo" class="ml-3" mat-raised-button color="accent">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

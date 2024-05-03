@@ -1,0 +1,99 @@
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-4">
+      <!-- Parte 1: Logo -->
+      <img src="assets/logo_empresa.png" alt="Logo" width="220 "  >
+    </div>
+    <div class="col-4">
+      <!-- Parte 2: Título -->
+      <h1 class="h1-titulo" [align]="'center'">El Bazar del Optometrista</h1>
+    </div>
+        <!-- Parte 3: Info -->
+    <div class="col-4"  [align]="'right'">
+      <p><b>Direccion:AV.RioChiro Mz.E Lote 24</b></p>
+      <p><b>Telefono:999666333</b></p>
+      
+    </div>
+  </div>
+</div>
+
+
+<mat-toolbar >
+  <a
+    [routerLink]="'/'"
+    mat-icon-button
+    class="example-icon"
+    arial-label="Example icon-button with menu icon"
+  >
+    <mat-icon>visibility icon</mat-icon>
+  </a>
+  <span>Bazar del optometrista</span>
+  <span class="example-spacer"></span>
+  <button
+    *ngIf = "!isLoggedIn || isLoggedIn "
+    mat-button
+    style="margin-right: 10px"
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    [routerLink] = "'/catalogo'"
+  >
+    Productos
+  </button>
+  <button
+    *ngIf = "!isLoggedIn || isLoggedIn"
+    mat-button
+    style="margin-right: 10px"
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    [routerLink] = "'/solicitarcita'"
+  >
+    Solicitar Cita
+  </button>
+  <button *ngIf="!isLoggedIn || isLoggedIn" mat-button style="margin-right: 10px" class="example-icon favorite-icon"
+  aria-label="Example icon-button with heart icon" [routerLink]="'/carrito'">
+  Carrito<mat-icon mat-list-icon matBadge="{{ cartItemCount }}" matBadgeColor="warn">shopping_cart</mat-icon>
+</button>
+
+  <a
+    *ngIf = "!isLoggedIn "
+    [routerLink]="'/login'"
+    mat-icon-button
+    class = "example-icon favorite-icon"
+    aria-label = "Example icon-button with heart icon"
+  >
+    Iniciar sesión
+  </a>
+  <a
+    *ngIf = "!isLoggedIn"
+    [routerLink]="'/signup'"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml70"
+    aria-label="Example icon-button with heart icon"
+  >
+    Registrar
+  </a>
+  <a
+    *ngIf = "isLoggedIn"
+    (click) = "logout()"
+    style="margin-right: 50px"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Cerrar sesión
+  </a>
+  <button
+  *ngIf="isLoggedIn && user"
+  mat-button
+  style="margin-right: 10px"
+  class="example-icon favorite-icon"
+  aria-label="Example icon-button with heart icon"
+  [routerLink]="getProfileLink()"
+>
+  {{ user.username }}
+</button>
+
+</mat-toolbar>
+
+
+

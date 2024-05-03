@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Mis Compras</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Codigo de pedido</th>
+          <th>Fecha de pedido </th>
+          <th>Total</th>
+          <th>nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pedido of pedidos">
+          <td>{{ pedido.codigo  }}</td>
+          <td>{{ pedido.fechaPedido | date }}</td>
+          <td>{{ pedido.total }}</td>
+          <td>{{ pedido.cliente.nombre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

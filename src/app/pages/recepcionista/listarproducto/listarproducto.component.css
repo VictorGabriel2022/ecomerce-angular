@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+  }
+.mat-header-row {
+    background-color: #3F51B5;
+   
+}
+.search-field {
+  margin-bottom: 16px; /* Margen inferior opcional para separar el campo de búsqueda de la tabla */
+}
+
+.search-input {
+  width: 300px; /* Ancho opcional para el campo de búsqueda */
+}
+
+.search-icon {
+  color: rgba(0, 0, 0, 0.38); /* Color opcional para el icono de búsqueda */
+  cursor: pointer;
+}

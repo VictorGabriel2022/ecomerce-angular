@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Mis Citas</h1>
+    <table class="table">
+      <thead >
+        <tr >
+          <th class="bg">Fecha Solicitud</th>
+          <th class="bg">Fecha de Atencion </th>
+          <th class="bg">Asunto</th>
+          <th class="bg">Optometrista</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cita of citas">
+          <td class="bg2">{{ cita.fechasolicitud | date }}</td>
+          <td class="bg2">{{ cita.fechaatencion | date }}</td>
+          <td class="bg2">{{ cita.asunto }}</td>
+          <td class="bg2">{{ cita.optometrista.nombre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

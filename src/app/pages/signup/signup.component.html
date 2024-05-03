@@ -1,0 +1,52 @@
+<div class="bootstrap-wrapper">
+  <div class="lienzo">
+    <div class="container-form">
+      <div class="image">
+        <img class="border" src="../../../assets/image 11.png" height="586" alt="Icono de registro">
+      </div>
+      <div class="information">
+        <form (ngSubmit)="formSubmit()">
+          <h1><b>Registrarse</b></h1>
+          <div *ngIf="currentStage === SignupStage.ClienteInfo">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nombre</mat-label>
+              <input required [(ngModel)]="clienteInfo.nombre" name="nombre" matInput placeholder="Digite su nombre">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Apellido</mat-label>
+              <input required [(ngModel)]="clienteInfo.apellido" name="apellido" matInput placeholder="Digite su apellido">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input required [(ngModel)]="clienteInfo.email" name="email" type="email" matInput placeholder="Digite su email">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Teléfono</mat-label>
+              <input required [(ngModel)]="clienteInfo.telefono" name="telefono" matInput placeholder="Digite su teléfono">
+            </mat-form-field>
+            <div class="container text-center">
+              <button mat-raised-button color="primary">Continuar</button>
+              <button routerLink="/catalogo" class="ml-3" mat-raised-button color="accent">Cancelar</button>
+            </div>
+          </div>
+          <div *ngIf="currentStage === SignupStage.UsuarioInfo">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nombre de usuario</mat-label>
+              <input required [(ngModel)]="usuarioInfo.username" name="username" matInput placeholder="Digite su nombre de usuario">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Contraseña</mat-label>
+              <input required [(ngModel)]="usuarioInfo.password" name="password" type="password" matInput placeholder="Digite su contraseña">
+            </mat-form-field>
+            <div class="container text-center">
+              <button mat-raised-button color="primary" >Registrar</button>
+              <button (click)="currentStage = SignupStage.ClienteInfo" class="ml-3" mat-raised-button color="accent">Volver</button>
+              <button routerLink="/catalogo" class="ml-3" mat-raised-button color="accent">Cancelar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

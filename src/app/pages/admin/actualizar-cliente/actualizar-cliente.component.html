@@ -1,0 +1,24 @@
+<h2>Actualizar Cliente</h2>
+
+  <mat-card-content>
+    <form (ngSubmit)="actualizarCliente()" #form="ngForm">
+        <mat-form-field>
+            <input matInput placeholder="Nombre" [(ngModel)]="cliente.nombre" name="nombre" required>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Dirección" [(ngModel)]="cliente.direccion" name="direccion" required></textarea>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Correo" [(ngModel)]="cliente.correo" name="correo" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="DNI" [(ngModel)]="cliente.dni" name="dni" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Teléfono" [(ngModel)]="cliente.telefono" name="telefono" required>
+          </mat-form-field>
+          
+          <button mat-raised-button color="primary" type="submit">Agregar</button>
+          <button mat-button mat-dialog-close>Cancelar</button>
+        </form>
+  </mat-card-content>

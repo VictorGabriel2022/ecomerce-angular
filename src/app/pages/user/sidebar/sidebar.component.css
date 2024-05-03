@@ -1,0 +1,40 @@
+.sidebar-container {
+    height: 90vh;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .sidebar-card {
+    flex-grow: 1;
+    background-color: #e6af2ecc;
+    color: #282F44;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+  }
+  
+  .mat-action-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0;
+  }
+  
+  .mat-list-item {
+    color: #282F44;
+    border: none; /* Elimina el borde en los elementos de la lista */
+  }
+  
+  .mat-list-item:hover,
+  .mat-list-item:focus {
+    background-color: rgba(255, 255, 255, 0.322);
+  }
+  
+  .mat-list-icon {
+    color: #282F44;
+    margin-right: 8px;
+  }
+  
+
+  
+  

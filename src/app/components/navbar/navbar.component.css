@@ -1,0 +1,38 @@
+.example-spacer{
+  flex: 1 1 auto;
+}
+.mat-toolbar {
+  background-color: #282F44;
+  color: #ECECEC;
+}
+.h1-titulo {
+  font-family: "Brush Script MT", sans-serif; /* Cambia "Arial" por la fuente deseada */
+  font-size: 36px; /* Cambia el tamaño de fuente si es necesario */
+  color: #0c0c0c; /* Cambia el color del título si es necesario */
+  /* Otros estilos adicionales que desees aplicar al título */
+}
+.container-fluid{
+  background-color: #ECECEC;
+  height: 90px;
+
+}
+.row{
+  
+  margin-left: 100px;
+  margin-right: 50px;
+}
+.col-4{
+  margin-top: 10px;
+  align-items: center;
+ 
+}
+
+
+
+
+
+
+
+
+
+

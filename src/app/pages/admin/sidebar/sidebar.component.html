@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-action-list>
+    <div mat-subheader>Menu</div>
+    <button routerLink = "/admin" mat-list-item style="color:white">
+      <mat-icon mat-list-icon>home</mat-icon> Inicio
+    </button>
+    <button mat-list-item routerLink = "/admin/profile"style="color:white">
+      <mat-icon mat-list-icon>account_circle</mat-icon>Perfil
+    </button>
+    <button mat-list-item routerLink = "/admin/usuarios"style="color:white">
+      <mat-icon mat-list-icon>account_box</mat-icon>Mantenedor Usuarios
+    </button>
+    <button mat-list-item routerLink = "/admin/clientes"style="color:white">
+      <mat-icon mat-list-icon>account_box</mat-icon>Mantenedor Clientes
+    </button>
+    <button mat-list-item routerLink = "/admin/productos" style="color:white">
+      <mat-icon mat-list-icon>assignment</mat-icon>Mantenedor Producto
+    </button>
+    <button mat-list-item routerLink = "/admin/productos" style="color:white">
+      <mat-icon mat-list-icon>assignment</mat-icon>Mantenedor Citas
+    </button>
+    <button mat-list-item routerLink = "/catalogo"style="color:white">
+      <mat-icon mat-list-icon>add_circle_outline</mat-icon>Catalogo de producto
+    </button>
+    <button mat-list-item (click) = "logout()">
+      <mat-icon mat-list-icon>logout</mat-icon>Salir
+    </button>
+  </mat-action-list>
+</mat-card>

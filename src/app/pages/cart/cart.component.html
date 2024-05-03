@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Carrito de Compras</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Precio Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems"  >
+        <td>{{ item.nombre }}</td>
+        <td>
+          <input type="number" [(ngModel)]="item.cantidadproducto"  min="1" >
+        </td>
+        <td>{{ item.precio }}</td>
+        <td>{{ item.precio * item.cantidadproducto }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="removeFromCart(item)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-right">
+    <h4>Total: {{ calculateTotalPrice() }}</h4>
+    <button class="btn btn-primary" (click)="generarPedido()">GENERAR PEDIDO</button>
+
+    <button class="btn btn-danger" routerLink="/catalogo">SEGUIR COMPRANDO</button>
+  </div>
+</div>
+
+  

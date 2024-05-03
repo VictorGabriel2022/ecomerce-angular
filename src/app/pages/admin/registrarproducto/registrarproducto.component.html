@@ -1,0 +1,22 @@
+<h2>Agregar Producto</h2>
+
+<mat-card-content>
+  <form (ngSubmit)="formSubmit()" #form="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Nombre" [(ngModel)]="producto.nombre" name="nombre" required>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Descripción" [(ngModel)]="producto.descripcion" name="descripcion" required></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Precio" [(ngModel)]="producto.precio" name="precio" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Cantidad" [(ngModel)]="producto.cantidad" name="cantidad" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Imagen" [(ngModel)]="producto.imagen" name="imagen" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Agregar</button>
+  </form>
+</mat-card-content>

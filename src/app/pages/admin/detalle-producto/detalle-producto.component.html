@@ -1,0 +1,26 @@
+<h2>Actualizar Producto</h2>
+
+  <mat-card-content>
+    <form (ngSubmit)="actualizarProducto()" #form="ngForm">
+      <mat-form-field>
+        <input matInput placeholder="nombre" [(ngModel)]="producto.nombre" name="nombre" required>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="descripcion" [(ngModel)]="producto.descripcion" name="descripcion" required></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="number" placeholder="precio" [(ngModel)]="producto.precio" name="precio" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="number" placeholder="cantidad" [(ngModel)]="producto.cantidad" name="cantidad" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="imagen" [(ngModel)]="producto.imagen" name="imagen" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Actualizar</button>
+      <button mat-button mat-dialog-close>Cancelar</button>
+
+    </form>
+  </mat-card-content>
+
+

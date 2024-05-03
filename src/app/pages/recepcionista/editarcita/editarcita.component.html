@@ -1,0 +1,22 @@
+<h2>Actualizar Cita</h2>
+
+<mat-card-content>
+  <form (ngSubmit)="actualizarCita()" #form="ngForm"> 
+    <mat-form-field>
+      <input matInput type="date" placeholder="Fecha de atención" [(ngModel)]="cita.fechaatencion" name="fechaatencion" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Optometrista</mat-label>
+      <mat-select [(ngModel)]="cita.optometrista.optometristaid" name="optometristaid" required>
+        <mat-option *ngFor="let optometrista of optometristas" [value]="optometrista.optometristaid">
+          {{ optometrista.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+   
+    <div class="buttons">
+      <button mat-raised-button color="primary" type="submit">Actualizar</button>
+      <button mat-button mat-dialog-close>Cancelar</button>
+    </div>
+  </form>
+</mat-card-content>
